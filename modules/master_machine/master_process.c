@@ -42,6 +42,7 @@ void VisionSetAltitude(float yaw, float pitch, float roll)
 static void VisionOfflineCallback(void *id)
 {
 #ifdef VISION_USE_UART
+    static USARTInstance *vision_usart_instance;
     USARTServiceInit(vision_usart_instance);
 #endif // !VISION_USE_UART
     LOGWARNING("[vision] vision offline, restart communication.");
