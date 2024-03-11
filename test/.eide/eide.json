@@ -16,7 +16,26 @@
   "virtualFolder": {
     "name": "<virtual_root>",
     "files": [],
-    "folders": []
+    "folders": [
+      {
+        "name": "s",
+        "files": [
+          {
+            "path": "../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib"
+          },
+          {
+            "path": "../Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a"
+          },
+          {
+            "path": "../Middlewares/ST/ARM/DSP/Lib/libCMSISDSP.a"
+          },
+          {
+            "path": "../startup_stm32f407xx.s"
+          }
+        ],
+        "folders": []
+      }
+    ]
   },
   "outDir": "build",
   "deviceName": null,
@@ -26,7 +45,14 @@
   },
   "targets": {
     "Debug": {
-      "excludeList": [],
+      "excludeList": [
+        "../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib",
+        "../Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a",
+        "../Middlewares/ST/ARM/DSP/Lib/libCMSISDSP.a",
+        "../Middlewares/ST/ARM/DSP/Lib",
+        "<virtual_root>/s/arm_cortexM4lf_math.lib",
+        "<virtual_root>/s/libCMSISDSP.a"
+      ],
       "toolchain": "GCC",
       "compileConfig": {
         "cpuType": "Cortex-M4",
